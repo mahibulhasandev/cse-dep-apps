@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cse_dep_apps.ui.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/teacherFragment"
+        android:name="com.example.cse_dep_apps.ui.TeacherFragment"
+        android:label="Teachers" />
+
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.cse_dep_apps.ui.StudentFragment"
+        android:label="Students" />
+
+    <fragment
+        android:id="@+id/noticeFragment"
+        android:name="com.example.cse_dep_apps.ui.NoticeFragment"
+        android:label="Notices" />
+
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.example.cse_dep_apps.ui.BookFragment"
+        android:label="Books" />
+
+    <fragment
+        android:id="@+id/routineFragment"
+        android:name="com.example.cse_dep_apps.ui.RoutineFragment"
+        android:label="Routine" />
+
+</navigation>
