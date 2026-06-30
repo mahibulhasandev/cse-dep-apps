@@ -59,4 +59,13 @@
     <string name="name_tanbir">MD. TANBIR ABBASI</string>
     <string name="name_khaleda">KHALEDA AKTHER</string>
     <string name="name_shajjad">MD. SHAJJAD HOSSAIN</string>
+    <string name="name_mahibul">MAHIBUL HASAN</string>
+
+    <!-- Student Fragment Strings -->
+    <string name="project_developer">Project Developer</string>
+    <string name="dev_subtitle">Developer of this Android Application</string>
+    <string name="dev_roll">Roll No: 777408</string>
+    <string name="dev_semester_shift">7th Semester | 2nd Shift</string>
+    <string name="student_records">Student Records</string>
+    <string name="roll_prefix">Roll: </string>
 </resources>
