@@ -1,9 +1,508 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- Hero Header -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/calendarIcon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@android:drawable/ic_menu_today"
+                    android:contentDescription="@string/routine_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/routineTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/routine_title_display"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/calendarIcon" />
+
+                <TextView
+                    android:id="@+id/routineSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/routine_subtitle"
+                    android:textColor="#E0E0E0"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/routineTitle" />
+
+                <TextView
+                    android:id="@+id/instituteName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/routine_institute"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/routineSubtitle" />
+
+                <TextView
+                    android:id="@+id/routineDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/routine_description_text"
+                    android:textColor="#F5F5F5"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/instituteName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Weekly Section Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/section_title_weekly"
+            android:textColor="@color/blue_700"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/section_description_weekly"
+            android:textColor="#757575"
+            android:textSize="14sp" />
+
+        <!-- SUNDAY -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#EEEEEE">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_today" android:contentDescription="@string/day_sunday" app:tint="@color/blue_700" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/day_sunday" android:textColor="@color/black" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp" android:background="#EEEEEE" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0800_0850" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_free" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_free" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0850_0940" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_adp" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_tanbir" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0940_1030" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_nas" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_mahabub" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1030_1120" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_cse" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_sohel" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1120_1210" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1210_0100" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_dmt" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_kajal" android:textColor="#757575" android:textSize="12sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lab_ag" android:textColor="@color/blue_700" android:textSize="11sp" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_lab" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0100_0150" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- MONDAY -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#EEEEEE">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_today" android:contentDescription="@string/day_monday" app:tint="@color/blue_700" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/day_monday" android:textColor="@color/black" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp" android:background="#EEEEEE" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0800_0850" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_free" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_free" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0850_0940" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_ie" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_mehedi" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0940_1030" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_cse" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_sohel" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1030_1120" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_nas" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_mahabub" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1120_1210" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1210_0100" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_ma" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_khaleda" android:textColor="#757575" android:textSize="12sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lab_sl2" android:textColor="@color/blue_700" android:textSize="11sp" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_lab" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0100_0150" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- TUESDAY -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#EEEEEE">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_today" android:contentDescription="@string/day_tuesday" app:tint="@color/blue_700" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/day_tuesday" android:textColor="@color/black" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp" android:background="#EEEEEE" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0800_0850" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_free" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_free" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0850_0940" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_pw" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_shajjad" android:textColor="#757575" android:textSize="12sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lab_hw" android:textColor="@color/blue_700" android:textSize="11sp" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_lab" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0940_1030" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1030_1120" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_nas" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_mahabub" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1120_1210" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_dmt" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_kajal" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1210_0100" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_ma" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_khaleda" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0100_0150" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_ie" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_mehedi" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- WEDNESDAY -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#EEEEEE">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_today" android:contentDescription="@string/day_wednesday" app:tint="@color/blue_700" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/day_wednesday" android:textColor="@color/black" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp" android:background="#EEEEEE" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0800_0850" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_free" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_free" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0850_0940" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_nas" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_mahabub" android:textColor="#757575" android:textSize="12sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lab_nw" android:textColor="@color/blue_700" android:textSize="11sp" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_lab" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0940_1030" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1030_1120" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_dmt" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_kajal" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1120_1210" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1210_0100" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_cse" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_sohel" android:textColor="#757575" android:textSize="12sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lab_ag" android:textColor="@color/blue_700" android:textSize="11sp" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_lab" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0100_0150" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- THURSDAY -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#EEEEEE">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_today" android:contentDescription="@string/day_thursday" app:tint="@color/blue_700" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/day_thursday" android:textColor="@color/black" android:textSize="18sp" android:textStyle="bold" />
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp" android:background="#EEEEEE" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0800_0850" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_free" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_free" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0850_0940" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_adp" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_tanbir" android:textColor="#757575" android:textSize="12sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lab_ag" android:textColor="@color/blue_700" android:textSize="11sp" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_lab" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0940_1030" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1030_1120" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_ma" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_khaleda" android:textColor="#757575" android:textSize="12sp" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_theory" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1120_1210" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_1210_0100" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_pw" android:textColor="@color/black" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name_shajjad" android:textColor="#757575" android:textSize="12sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lab_hw" android:textColor="@color/blue_700" android:textSize="11sp" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_lab" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/time_0100_0150" android:textColor="#757575" android:textSize="12sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subject_break" android:textColor="@color/black" android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/chip_break" app:chipMinHeight="24dp" android:textSize="11sp" android:clickable="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

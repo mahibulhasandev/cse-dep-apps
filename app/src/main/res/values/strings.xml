@@ -68,4 +68,177 @@
     <string name="dev_semester_shift">7th Semester | 2nd Shift</string>
     <string name="student_records">Student Records</string>
     <string name="roll_prefix">Roll: </string>
+
+    <!-- Routine Fragment Strings -->
+    <string name="routine_title_display">📅 Class Routine</string>
+    <string name="routine_title">Class Routine</string>
+    <string name="routine_subtitle">Computer Science and Technology (CST)</string>
+    <string name="routine_institute">Moulvibazar Polytechnic Institute</string>
+    <string name="routine_description_text">This page provides the official weekly class routine for 7th Semester students of the Computer Science and Technology (CST) Department. Students can quickly access their academic schedule and stay organized throughout the semester.</string>
+    <string name="section_title_weekly">🗓 Weekly Class Routine</string>
+    <string name="section_description_weekly">Official weekly class schedule for 7th Semester students.</string>
+
+    <!-- Day Names -->
+    <string name="day_sunday">SUNDAY</string>
+    <string name="day_monday">MONDAY</string>
+    <string name="day_tuesday">TUESDAY</string>
+    <string name="day_wednesday">WEDNESDAY</string>
+    <string name="day_thursday">THURSDAY</string>
+
+    <!-- Times -->
+    <string name="time_0800_0850">08:00 - 08:50</string>
+    <string name="time_0850_0940">08:50 - 09:40</string>
+    <string name="time_0940_1030">09:40 - 10:30</string>
+    <string name="time_1030_1120">10:30 - 11:20</string>
+    <string name="time_1120_1210">11:20 - 12:10</string>
+    <string name="time_1210_0100">12:10 - 01:00</string>
+    <string name="time_0100_0150">01:00 - 01:50</string>
+
+    <!-- Status Chips -->
+    <string name="chip_theory">Theory</string>
+    <string name="chip_lab">Lab</string>
+    <string name="chip_break">Break</string>
+    <string name="chip_free">Free</string>
+
+    <!-- Lab Names -->
+    <string name="lab_ag">AG LAB</string>
+    <string name="lab_sl2">SL-2</string>
+    <string name="lab_hw">HW LAB</string>
+    <string name="lab_nw">NW LAB</string>
+
+    <!-- Teacher Prefix -->
+    <string name="teacher_label">Teacher: </string>
+    <string name="lab_label">Lab: </string>
+    <string name="subject_free">Free</string>
+    <string name="subject_break">Break</string>
+
+    <!-- Books Fragment Strings -->
+    <string name="academic_books">Academic Books</string>
+    <string name="books_description">This page provides the recommended academic books for 7th Semester students of the Computer Science and Technology (CST) Department. Students can easily explore subject-wise books to support both theoretical learning and practical skills.</string>
+    <string name="recommended_books">📖 Recommended Books</string>
+    <string name="recommended_books_desc">Browse the recommended books for each 7th Semester subject.</string>
+
+    <string name="subject_ie">Innovation &amp; Entrepreneurship</string>
+    <string name="code_ie">Code: 25853</string>
+    <string name="book_ie">Innovation and Entrepreneurship</string>
+    <string name="author_ie">Peter F. Drucker</string>
+
+    <string name="subject_dmt">Digital Marketing Technique</string>
+    <string name="code_dmt">Code: 28571</string>
+    <string name="book_dmt">Digital Marketing For Dummies</string>
+    <string name="author_dmt">Ryan Deiss &amp; Russ Henneberry</string>
+
+    <string name="subject_nas">Network Administration &amp; Services</string>
+    <string name="code_nas">Code: 28572</string>
+    <string name="book_nas">Network Administration: A Beginner\'s Guide</string>
+    <string name="author_nas">Wally Wang</string>
+
+    <string name="subject_cse">Cyber Security &amp; Ethics</string>
+    <string name="code_cse">Code: 28573</string>
+    <string name="book_cse">Cybersecurity Essentials</string>
+    <string name="author_cse">Charles J. Brooks</string>
+
+    <string name="subject_adp">Apps Development Project</string>
+    <string name="code_adp">Code: 28574</string>
+    <string name="book_adp">Android Programming: The Big Nerd Ranch Guide</string>
+    <string name="author_adp">Bill Phillips &amp; Chris Stewart</string>
+
+    <string name="subject_ma">Multimedia &amp; Animation</string>
+    <string name="code_ma">Code: 28575</string>
+    <string name="book_ma">Multimedia: Making It Work</string>
+    <string name="author_ma">Tay Vaughan</string>
+
+    <string name="subject_pw">Project Work-II</string>
+    <string name="code_pw">Code: 28576</string>
+    <string name="book_pw">Software Project Management</string>
+    <string name="author_pw">Bob Hughes &amp; Mike Cotterell</string>
+    <string name="cst_dept">Computer Science and Technology (CST)</string>
+    <string name="institute_name">Moulvibazar Polytechnic Institute</string>
+    <string name="book_icon">Book Icon</string>
+
+    <!-- Notice Fragment Strings -->
+    <string name="notice_title_display">📢 Department Notices</string>
+    <string name="notice_title">Department Notices</string>
+    <string name="notice_description">Stay informed with the latest announcements, academic updates, examination schedules, events, and important departmental notices.</string>
+    <string name="latest_notices">📋 Latest Notices</string>
+    <string name="latest_notices_desc">All important departmental notices will appear here.</string>
+    <string name="no_notices_available">📢 No Notices Available</string>
+    <string name="no_notices_subtitle">There are currently no notices to display.\nPlease check back later for updates.</string>
+    <string name="notice_icon_desc">Notice Icon</string>
+    <!-- Teachers Fragment Strings -->
+    <string name="faculty_members">Faculty Members</string>
+    <string name="teachers_description">Meet the dedicated and experienced faculty members of the Computer Science and Technology Department. Our teachers are committed to providing quality education, practical knowledge, academic guidance, and continuous support to help students achieve their goals.</string>
+    <string name="dept_label">Dept: CST</string>
+    <string name="total_faculty">Total Faculty: 7</string>
+    <string name="semester_7th">Semester: 7th</string>
+    <string name="institute_chip">Institute: MPI</string>
+    <string name="position_instructor">Instructor</string>
+    <string name="dept_full_name">Computer Science &amp; Technology Department</string>
+    <string name="label_faculty">Teachers</string>
+    <string name="val_faculty_count">7</string>
+    <string name="label_dept_code">Department</string>
+    <string name="val_dept_code">CST</string>
+    <string name="label_semester_overview">Semester</string>
+    <string name="val_semester_overview">7th</string>
+    <string name="label_institute_overview">Institute</string>
+    <string name="val_institute_overview">MPI</string>
+    <!-- Home Fragment Strings -->
+    <string name="welcome_to">Welcome to</string>
+    <string name="cst_full_name">Computer Science &amp; Technology (CST)</string>
+    <string name="home_description">Welcome to the official CST Department Management application of Moulvibazar Polytechnic Institute.\n\nThis application provides quick and organized access to teachers, students, class routines, academic subjects, recommended books, and department notices.</string>
+
+    <string name="quick_access">Quick Access</string>
+    <string name="menu_teachers">Teachers</string>
+    <string name="menu_students">Students</string>
+    <string name="menu_routine">Class Routine</string>
+    <string name="menu_subjects">Subjects</string>
+    <string name="menu_books">Books</string>
+    <string name="menu_notices">Notices</string>
+
+    <string name="icon_teachers">👨‍🏫</string>
+    <string name="icon_students">👨‍🎓</string>
+    <string name="icon_routine">📅</string>
+    <string name="icon_subjects">📚</string>
+    <string name="icon_books">📖</string>
+    <string name="icon_notices">📢</string>
+
+    <string name="dept_overview">Department Overview</string>
+    <string name="count_teachers">7</string>
+    <string name="count_students">100+</string>
+    <string name="count_subjects">7</string>
+    <string name="count_semester">7th</string>
+    <string name="label_students">Students</string>
+    <string name="label_subjects">Subjects</string>
+    <string name="label_semester">Semester</string>
+    <string name="val_semester">7th Semester</string>
+
+    <string name="about_dept_title">About Department</string>
+    <string name="about_dept_desc">The Computer Science and Technology (CST) Department of Moulvibazar Polytechnic Institute is dedicated to providing quality technical education, practical skills, and innovative learning opportunities. The department prepares students for careers in software development, networking, cybersecurity, mobile application development, and modern information technology.</string>
+
+    <string name="academic_services">Academic Services</string>
+    <string name="service_faculty">Faculty Information</string>
+    <string name="service_directory">Student Directory</string>
+    <string name="service_routine">Weekly Class Routine</string>
+    <string name="service_subjects">Subject Information</string>
+    <string name="service_books">Academic Books</string>
+    <string name="service_notices">Department Notices</string>
+
+    <string name="app_info_title">Application Information</string>
+    <string name="label_application">Application</string>
+    <string name="val_application">CST Department Management</string>
+    <string name="label_version">Version</string>
+    <string name="val_version">1.0</string>
+    <string name="label_platform">Platform</string>
+    <string name="val_platform">Android</string>
+
+    <string name="dev_by_title">👨‍💻 Developed By</string>
+    <string name="label_name">Name</string>
+    <string name="val_dev_name">Mahibul Hasan</string>
+    <string name="label_role">Role</string>
+    <string name="val_dev_role">Android Application Developer</string>
+    <string name="label_dept">Department</string>
+    <string name="val_dev_dept">Computer Science &amp; Technology (CST)</string>
+    <string name="dev_desc">This application was designed and developed by Mahibul Hasan as an academic project for the Computer Science and Technology (CST) Department of Moulvibazar Polytechnic Institute. The goal of this application is to provide students with quick, organized, and user-friendly access to departmental information and academic resources.</string>
+
+    <string name="footer_copyright">© 2026 All Rights Reserved</string>
 </resources>
